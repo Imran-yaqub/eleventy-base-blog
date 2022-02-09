@@ -1,10 +1,10 @@
 {
-  "title": "Your Blog Name",
+  "title": "Imran's Blog",
   "url": "https://example.com/",
   "language": "en",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "description": "My GHASD Blog.",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "First Blog using 11ty, Netlify & Github",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://example.com/"
@@ -14,7 +14,7 @@
     "url": "https://example.com/feed/feed.json"
   },
   "author": {
-    "name": "Your Name Here",
+    "name": "Imran Yaqub",
     "email": "youremailaddress@example.com",
     "url": "https://example.com/about-me/"
   }
