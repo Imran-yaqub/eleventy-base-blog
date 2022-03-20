@@ -13,6 +13,7 @@
   </head>
   <body>
     <header>
+    <header style="background: pink;" class="page-header font-black">
       <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
       <img src="/img/logo.jpg" height="100" align="left"/>{# Blog logo image #}
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
@@ -24,13 +25,24 @@
     </header>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-
+<div class="alert" style="background: red;">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Warning!</strong> Best check yo self, you ain't looking so good.
+</div>
       
 
       {{ content | safe }}
     </main>
 
-    <footer></footer>
+    <footer><!-- Footer -->
+<footer style="background: pink;" class="page-footer font-black">
+  <!-- Copyright -->
+  <div class="footer-AWESOMENESS text-center py-3">© 2022 AWESOMENESS:
+    <a href="I'M STILL LEARNING"> I'm a Coding Novice </a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer --></footer>
 
     <!-- Current page: {{ page.url | url }} -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
