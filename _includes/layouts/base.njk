@@ -25,12 +25,7 @@
     </header>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-
-<div class="alert" style="background: red;">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <strong>Warning!</strong> Best check yo self, you ain't looking so good.
-</div>
-      
+        
       {{ content | safe }}
     </main>
 
@@ -73,17 +68,20 @@
     </div>
   </div>
 </div>
-
-
-
 <!--Accordion-->
 
-
-
+<!--Alert button-->
+<div class="alert" style="background: black;"">
+  <strong>Warning!</strong> 
+  DO NOT CLICK THIS
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+  BUTTON.
+</div>
+<!--Alert button-->
 
     <footer>
     <!-- Footer -->
-<footer style="background: pink;" class="page-footer font-black">
+<footer style="background: pink;" class="page-footer: "font-black">
   <!-- Copyright -->
   <div class="footer-AWESOMENESS text-center py-3">© 2022 AWESOMENESS:
     <a href="I'M STILL LEARNING"> I'm a Coding Novice </a>
