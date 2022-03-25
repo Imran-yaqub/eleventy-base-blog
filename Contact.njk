@@ -1,0 +1,80 @@
+---
+layout: layouts/Contact.njk
+permalink: /Contact/
+eleventyNavigation:
+  key: Contact
+  order: 5
+---
+
+<h3>Contact Me</h3>
+<p>Send me your feedback. If you would like to see any additions to the site or have any suggestions for content please do let me know.</p>
+
+<form name="Contact Imran" method="POST" data-netlify="true">
+    <p>
+        <label>First Name: <input type="text" id="name" name="name" placeholder="Joe"/></label>   
+    </p>
+    <p>
+        <label>Surname: <input type="text" id="name" name="name" placeholder="bloggs"/></label>   
+    </p>
+    <p>
+        <label>Email Address: <input type="email" id="email" name="email" placeholder="joe@bloggs.com"/></label>
+    </p>
+        <p>
+        <label>Message: <textarea name="message"></textarea></label>
+    </p>
+<p>
+<label>Site rating: <select name="options" id="options">
+<option value="10">10</option>
+<option value="9">9</option>
+<option value="8">8</option>
+<option value="7">7</option>
+<option value="6">6</option>
+<option value="5">5</option>
+<option value="4">4</option>
+<option value="3">3</option>
+<option value="2">2</option>
+<option value="1">1</option></label></select></p>
+    <p>
+        <button class="form_submit" type="submit">submit</button></p>  
+</form>
+<script>
+    //get default border colours (to use on input when validation passes)
+    var borderStylePass = document.querySelector('#name').style.border;
+    //set fail border colours (to use on input when validation fails)
+    var borderStyleFail = '1px solid red';
+    //get the form submit button
+    var submit_button = document.querySelector('.form_submit');
+    //attach form event listener
+    submit_button.addEventListener("click", function(event){
+        //get the form "name" elemement
+        var name = document.querySelector('#name');
+        //get the form "email" element
+        var email = document.querySelector('#email');
+        //all validation is assumed to be passed until tested
+        blnValidated = true;
+        //change the border as it the validation passed
+        name.style.border = borderStylePass;
+        //if validation fails change the bln to false and change the input border colour
+        if(!name.value){
+            blnValidated = false;
+            name.style.border = borderStyleFail;
+        }
+        //if validation fails change the bln to false and change the input border colour
+        email.style.border = borderStylePass;
+        if(!email.value){
+            blnValidated = false;
+            email.style.border = borderStyleFail;
+        }
+        //if validation failed do not allow the form to submit the data
+        if(!blnValidated){
+            event.preventDefault();
+        }
+    }, false);
+</script>
+
+
+
+
+{% set postslist = collections.posts %}
+{% include "postslist.njk" %}
+
